@@ -165,6 +165,11 @@ input:checked ~ .bubble::after {
   width: 100%;
 }
 
+.todo__item .todo__content .completed {
+  text-decoration: line-through;
+  color: var(--mouse);
+}
+
 .todo__item .todo__actions {
   display: flex;
   align-items: center;

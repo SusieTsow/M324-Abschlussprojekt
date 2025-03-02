@@ -23,8 +23,13 @@ export default function App() {
   };
 
   const handleToggleComplete = async (id) => {
-    const updatedTodo = await toggleComplete(id);
-    setTodos(todos.map((todo) => (todo._id === id ? updatedTodo : todo)));
+    try {
+      console.log("Toggling complete for ID:", id); // 调试信息
+      const updatedTodo = await toggleComplete(id);
+      setTodos(todos.map((todo) => (todo._id === id ? updatedTodo : todo)));
+    } catch (error) {
+      console.error("Error in handleToggleComplete:", error); // 调试信息
+    }
   };
 
   return (
