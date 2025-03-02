@@ -1,0 +1,10 @@
+# Node.js files
+node_modules/
+.env
+package-lock.json
+
+# VS Code files
+.vscode/
+
+# MacOS files
+.DS_Store
