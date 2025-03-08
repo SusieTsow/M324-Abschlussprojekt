@@ -4,7 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import todoRoutes from "./routes/todoRoutes.js";
 
-dotenv.config();
+dotenv.config({ path: "../.env" });
 
 const app = express();
 
