@@ -1,21 +1,28 @@
 services:
   - type: web
-    name: frontend-react
-    runtime: static
-    repo: https://github.com/SusieTsow/M324-Abschlussprojekt
-    buildCommand: npm install && npm run build
-    staticPublishPath: build
-    rootDir: frontend
-  - type: web
-    name: backend-express
-    env: node
-    repo: https://github.com/SusieTsow/M324-Abschlussprojekt
-    buildCommand: npm install
-    startCommand: node server.js
-    rootDir: backend
+    name: backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    port: 5001
     envVars:
       - key: MONGO_URI
-        sync: false
+        fromSecret: MONGO_URI
       - key: PORT
-        value: 5001
-version: "1"
+        value: "5001"
+    internalPort: 5001
+
+  - type: web
+    name: frontend
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    port: 3000
+    envVars:
+      - key: REACT_APP_API_URL
+        value: http://backend:5001
+    internalPort: 3000
+    dependsOn:
+      - backend
+
+secrets:
+  - id: MONGO_URI
+    name: MONGO_URI
