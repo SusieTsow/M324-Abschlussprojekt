@@ -4,6 +4,14 @@ services:
     runtime: static
     repo: https://github.com/SusieTsow/M324-Abschlussprojekt
     buildCommand: npm install && npm run build
-    staticPublishPath: ./frontend/dist
+    staticPublishPath: dist
     rootDir: frontend
+  - type: web
+    name: backend-node
+    runtime: docker
+    repo: https://github.com/SusieTsow/M324-Abschlussprojekt
+    plan: free
+    region: frankfurt
+    dockerfilePath: Dockerfile
+    rootDir: backend
 version: "1"
