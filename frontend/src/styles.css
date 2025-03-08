@@ -49,7 +49,7 @@ button:focus-visible {
   width: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-color: var(--blush);
+  background-color: var(--jet);
   padding: 1rem;
 }
 
