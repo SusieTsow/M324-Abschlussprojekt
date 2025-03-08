@@ -2,7 +2,7 @@ services:
   - type: web
     name: frontend-react
     runtime: static
-    repo: https://github.com/SusieTsow/M324-Abschlussprojekt/tree/main
+    repo: https://github.com/SusieTsow/M324-Abschlussprojekt
     buildCommand: npm install && npm run build
     staticPublishPath: ./frontend/dist
     rootDir: frontend
