@@ -25,11 +25,11 @@ export const deleteTodo = async (id) => {
 
 export const toggleComplete = async (id) => {
   try {
-    console.log("Toggling complete for ID:", id); // 调试信息
+    console.log("Toggling complete for ID:", id);
     const response = await axios.patch(`${API_URL}/${id}/toggle`);
     return response.data;
   } catch (error) {
-    console.error("Error toggling complete:", error); // 调试信息
+    console.error("Error toggling complete:", error);
     throw error;
   }
 };

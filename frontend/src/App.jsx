@@ -12,9 +12,9 @@ export default function App() {
 
   const handleAddTodo = async (text) => {
     const newTodo = await addTodo(text);
-    console.log("New Todo:", newTodo); // 调试信息
+    console.log("New Todo:", newTodo);
     setTodos([newTodo, ...todos]);
-    console.log("Updated Todos:", [newTodo, ...todos]); // 调试信息
+    console.log("Updated Todos:", [newTodo, ...todos]);
   };
 
   const handleDeleteTodo = async (id) => {
@@ -24,11 +24,11 @@ export default function App() {
 
   const handleToggleComplete = async (id) => {
     try {
-      console.log("Toggling complete for ID:", id); // 调试信息
+      console.log("Toggling complete for ID:", id);
       const updatedTodo = await toggleComplete(id);
       setTodos(todos.map((todo) => (todo._id === id ? updatedTodo : todo)));
     } catch (error) {
-      console.error("Error in handleToggleComplete:", error); // 调试信息
+      console.error("Error in handleToggleComplete:", error);
     }
   };
 
