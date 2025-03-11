@@ -31,7 +31,6 @@ This project is a simple Todo application built with a React frontend and an Exp
 │   ├── App.js       # Main React component
 │   └── index.js     # React entry point
 │
-│── /tests           # Test files
 │── package.json     # Dependency management
 │── README.md        # Project documentation
 │── .gitignore       # Git ignored files
