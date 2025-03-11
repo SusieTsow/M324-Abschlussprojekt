@@ -4,11 +4,38 @@ This project is a simple Todo application built with a React frontend and an Exp
 
 ## Table of Contents
 
+- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Project Structure
+
+```
+/M324-Abschlussprojekt
+│── /backend          # Backend (Node.js + Express)
+│   ├── /routes      # API routes
+│   ├── /models      # Database models (MongoDB)
+│   ├── /controllers # Business logic
+│   ├── /config      # Configuration files
+│   ├── server.js    # Server entry point
+│   └── .env.example # Example environment variables
+│
+│── /frontend        # Frontend (React)
+│   ├── /src         # Source code
+│   ├── /components  # UI components
+│   ├── /pages       # Page components
+│   ├── /services    # API services
+│   ├── App.js       # Main React component
+│   └── index.js     # React entry point
+│
+│── /tests           # Test files
+│── package.json     # Dependency management
+│── README.md        # Project documentation
+│── .gitignore       # Git ignored files
+```
 
 ## Installation
 
