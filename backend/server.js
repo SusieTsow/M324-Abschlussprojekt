@@ -11,7 +11,7 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: "*", // Allow all origins (for development purposes)
+    origin: ["https://frontend-react-t3aq.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -21,19 +21,21 @@ app.use(express.json());
 // routes
 app.use("/api/todos", todoRoutes);
 
-// Add a route for the root URL
+// Health check route
 app.get("/", (req, res) => {
   res.send("Welcome to the Todo API");
 });
 
 // Connect to MongoDB and start the server
+const PORT = process.env.PORT || 5001;
+
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    app.listen(process.env.PORT || 5001, () => {
+    app.listen(PORT, () => {
       console.log(
         `🚀 Server running on http://localhost:${process.env.PORT || 5001}`
       );
