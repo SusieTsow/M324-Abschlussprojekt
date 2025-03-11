@@ -89,6 +89,31 @@ Toggle the completion status of a todo.
 
 Delete a todo.
 
+## CI/CD Pipeline
+
+1. **Linting and Formatting**:
+
+   - The project follows coding standards using **ESLint** and **Prettier**.
+
+2. **Continuous Deployment**:
+   - The project is deployed on **Render**.
+   - Every push to the `main` branch triggers an automatic deployment.
+
+## Dependencies
+
+### Backend
+
+- **Node.js** (18+)
+- **Express.js**
+- **MongoDB** + **Mongoose**
+- **dotenv** (Environment Variables)
+
+### Frontend
+
+- **React 18+**
+- **React Router**
+- **Axios** (API Requests)
+
 ## Contributing
 
 1. Fork the repository.
