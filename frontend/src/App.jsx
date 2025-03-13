@@ -4,7 +4,7 @@ import TodoForm from "./components/TodoForm";
 import { getTodos, addTodo, deleteTodo, toggleComplete } from "./services/api";
 
 const VITE_API_FRONTEND_TEST = import.meta.env.VITE_API_FRONTEND_TEST;
-const VITE_API_URL = import.meta.env.REACT_APP_API_URL;
+const VITE_API_URL = import.meta.env.VITE_API_URL;
 
 console.log("VITE_API_FRONTEND_TEST:", VITE_API_FRONTEND_TEST);
 
