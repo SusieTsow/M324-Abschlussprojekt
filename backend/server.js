@@ -7,6 +7,9 @@ import todoRoutes from "./routes/todoRoutes.js";
 dotenv.config({ path: "../.env" });
 
 const app = express();
+const TEST_CONNECTION = process.env.TEST_CONNECTION;
+const ANOTHER_NAME = process.env.ANOTHER_NAME;
+const API_URL = process.env.API_URL;
 
 // middleware
 app.use(
@@ -21,7 +24,9 @@ app.use("/api/todos", todoRoutes);
 
 // Health check route
 app.get("/", (req, res) => {
-  res.send("Welcome to the Todo API");
+  res.send(
+    `Text connection is: X${TEST_CONNECTION}X \n Another name is: X${ANOTHER_NAME}X \n api url is: X${API_URL}X`
+  );
 });
 
 // Connect to MongoDB and start the server

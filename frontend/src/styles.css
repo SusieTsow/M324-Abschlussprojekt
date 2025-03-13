@@ -2,7 +2,7 @@
   --blush: hsl(14, 76%, 80%);
   --beige: hsl(38, 70%, 95%);
   --wheat: hsl(38, 70%, 90%);
-  --jet: hsl(69, 8%, 17%);
+  --jet: hsl(72, 6%, 17%);
   --mouse: hsl(69, 8%, 67%);
   --shadow-mobile: 0.25rem 0.25rem var(--jet);
   --shadow-desktop: 0.5rem 0.5rem var(--jet);
