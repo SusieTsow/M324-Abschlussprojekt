@@ -4,7 +4,7 @@ import TodoForm from "./components/TodoForm";
 import { getTodos, addTodo, deleteTodo, toggleComplete } from "./services/api";
 
 const FRONTEND_TEST = process.env.FRONTEND_TEST;
-const API_URL = process.env.API_URL;
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -46,7 +46,7 @@ export default function App() {
           onToggle={handleToggleComplete}
         />
         <p>Frontend test: X{FRONTEND_TEST}X</p>
-        <p>API test: X{API_URL}X</p>
+        <p>API test: X{REACT_APP_API_URL}X</p>
       </main>
     </div>
   );

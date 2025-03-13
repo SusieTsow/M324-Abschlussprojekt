@@ -9,7 +9,7 @@ dotenv.config({ path: "../.env" });
 const app = express();
 const TEST_CONNECTION = process.env.TEST_CONNECTION;
 const ANOTHER_NAME = process.env.ANOTHER_NAME;
-const API_URL = process.env.API_URL;
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 // middleware
 app.use(
@@ -25,7 +25,7 @@ app.use("/api/todos", todoRoutes);
 // Health check route
 app.get("/", (req, res) => {
   res.send(
-    `Text connection is: X${TEST_CONNECTION}X \n Another name is: X${ANOTHER_NAME}X \n api url is: X${API_URL}X`
+    `Text connection is: X${TEST_CONNECTION}X \n Another name is: X${ANOTHER_NAME}X \n api url is: X${REACT_APP_API_URL}X`
   );
 });
 
