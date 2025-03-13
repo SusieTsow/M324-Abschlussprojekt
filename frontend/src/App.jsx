@@ -3,8 +3,10 @@ import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import { getTodos, addTodo, deleteTodo, toggleComplete } from "./services/api";
 
-const REACT_APP_FRONTEND_TEST = process.env.REACT_APP_FRONTEND_TEST;
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+const VITE_API_FRONTEND_TEST = import.meta.env.VITE_API_FRONTEND_TEST;
+const VITE_API_URL = import.meta.env.REACT_APP_API_URL;
+
+console.log("VITE_API_FRONTEND_TEST:", VITE_API_FRONTEND_TEST);
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -46,7 +48,7 @@ export default function App() {
           onToggle={handleToggleComplete}
         />
         <p>Frontend test: X{REACT_APP_FRONTEND_TEST}X</p>
-        <p>API test: X{REACT_APP_API_URL}X</p>
+        <p>API test: X{VITE_API_URL}X</p>
       </main>
     </div>
   );

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const REACT_APP_API_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:5001/api/todos";
+  import.meta.env.VITE_API_URL || "http://localhost:5001/api/todos";
 
 export const getTodos = async () => {
   const response = await axios.get(REACT_APP_API_URL);
