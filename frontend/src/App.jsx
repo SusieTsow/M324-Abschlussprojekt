@@ -47,7 +47,7 @@ export default function App() {
           onDelete={handleDeleteTodo}
           onToggle={handleToggleComplete}
         />
-        <p>Frontend test: X{REACT_APP_FRONTEND_TEST}X</p>
+        <p>Frontend test: X{VITE_API_FRONTEND_TEST}X</p>
         <p>API test: X{VITE_API_URL}X</p>
       </main>
     </div>
