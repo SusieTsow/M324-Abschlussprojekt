@@ -11,7 +11,10 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: ["https://frontend-react-t3aq.onrender.com"],
+    origin: [
+      "https://frontend-react-t3aq.onrender.com",
+      "http://localhost:3000",
+    ],
   })
 );
 app.use(express.json());

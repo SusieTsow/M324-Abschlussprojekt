@@ -16,7 +16,5 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 5001
 
-ENV ANOTHER_NAME = "Another Name"
-
 # Start the application
 CMD ["node", "server.js"]
