@@ -3,7 +3,7 @@ import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import { getTodos, addTodo, deleteTodo, toggleComplete } from "./services/api";
 
-const FRONTEND_TEST = process.env.FRONTEND_TEST;
+const REACT_APP_FRONTEND_TEST = process.env.REACT_APP_FRONTEND_TEST;
 const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
           onDelete={handleDeleteTodo}
           onToggle={handleToggleComplete}
         />
-        <p>Frontend test: X{FRONTEND_TEST}X</p>
+        <p>Frontend test: X{REACT_APP_FRONTEND_TEST}X</p>
         <p>API test: X{REACT_APP_API_URL}X</p>
       </main>
     </div>
